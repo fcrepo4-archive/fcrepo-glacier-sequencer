@@ -1,0 +1,20 @@
+/*
+ * JCR node types for use with Fedora
+ */
+<fcrepo = 'http://fcrepo.org/'>
+<glacier = 'http://fcrepo.org/glacier/'>
+<jcr = 'http://www.jcp.org/jcr/1.0'>
+<nt = 'http://www.jcp.org/jcr/nt/1.0'>
+
+/*
+* <mix = 'http://www.jcp.org/jcr/mix/1.0'>
+*
+* [fcrepo:resource] > mix:created, mix:lastModified, mix:lockable, mix:versionable mixin abstract
+*	- fcrepo:created (STRING) COPY
+*/
+
+[fcrepo:glacier.backup] > nt:file mixin
+	- glacier:checksum (STRING) mandatory
+	- glacier:archive.id (STRING) mandatory
+	- glacier:location (STRING) mandatory
+	- glacier:vault (STRING) mandatory

@@ -1,0 +1,17 @@
+{
+    "name" : "Glacier Backup Sequencer Test Repository",
+    "sequencing" : {
+        "removeDerivedContentWithOriginal" : true,
+        "sequencers" : {
+            "GlacierSequencer" : {
+                "classname" : "org.fcrepo.glacier.GlacierBackupSequencer",
+                "pathExpressions" : [ "default:/(*)/jcr:content[@jcr:data]" ],
+                "accessKey" : "foo",
+                "secretKey" : "bar",
+                "endpoint" : "http://localhost:8000",
+                "defaultVault" : "test"
+            }
+        }
+    },
+    "node-types" : ["config/glacier-backup.cnd"]
+}
